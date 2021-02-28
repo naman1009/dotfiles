@@ -61,7 +61,7 @@ end
 beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
-terminal = "gnome-terminal --hide-menubar"
+terminal = "alacritty"
 editor = "nvim"
 editor_cmd = terminal .. " -e " .. editor
 
@@ -120,7 +120,7 @@ mykeyboardlayout = awful.widget.keyboardlayout()
 
 -- {{{ Wibar
 -- Create a textclock widget
-mytextclock = wibox.widget.textclock()
+mytextclock = wibox.widget.textclock(" %a %b %d, %I:%M ")
 
 -- Create a wibox for each screen and add it
 local taglist_buttons = gears.table.join(
@@ -371,7 +371,7 @@ globalkeys = gears.table.join(
         end,
         {description = "Launches spotify"}),
       awful.key({modkey, "Shify"}, "d", function() awful.util.spawn("discord")end, {description="Launches discord"}),
-      awful.key({modkey}, "n", function() awful.util.spawn_with_shell('gnome-terminal --hide-menubar')end, {description="Launches nvim(The best text editor in the world)"})
+      awful.key({modkey}, "n", function() awful.util.spawn_with_shell('gnome-terminal --hide-menubar -- nvim')end, {description="Launches nvim(The best text editor in the world)"})
 )
 
 clientkeys = gears.table.join( 

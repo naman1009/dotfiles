@@ -76,12 +76,16 @@ filetype plugin on
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 noremap <A-K> "add"ap
 noremap <A-J> "add"ap
+nmap L $
+nmap H ^
 imap <c-bs> <C-w>
 noremap <C-c> "+y
 nmap <Silent><Leader>e :CocCommand explorer<CR>
 nmap <silent><Leader>co :Colors<CR>
 nmap <Leader>t :NERDTree %<CR>
 nmap <Leader>I :e! ~/init.vim<CR>
+nmap <Leader>> <C-w>>
+nmap <Leader>< <C-w><
 nmap <Leader><UP> zc
 nmap <Leader><DOWN> zo
 nmap <S><S> :Files!<CR>
@@ -179,6 +183,7 @@ command! Init :e! ~/init.vim
 call plug#begin('~/.vim/plugged')
 
 Plug 'tpope/vim-fugitive'
+Plug 'doums/darcula'
 Plug 'calviken/vim-gdscript3'
 Plug 'ayu-theme/ayu-vim'
 Plug 'rakr/vim-one'

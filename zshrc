@@ -129,6 +129,7 @@ export EDITOR=nvim
 export LC_CTYPE=en_IN.utf8
 
 alias ne0fetch="neofetch --ascii_distro 'Arch'"
+alias vim="nvim"
 alias w='nitrogen --set-scaled --random ~/wallpaper'
 alias vi='nvim -c"color default"'
 alias sleep='systemctl suspend' 
